@@ -9,9 +9,9 @@ import { IconService } from 'carbon-components-angular';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  @HostBinding('class.cds--header') headerClass = true;
+  @HostBinding('class.bx--header') headerClass = true;
   constructor(protected iconService: IconService) { }
   ngOnInit(): void {
-    this.iconService.registerAll([Notification20]);
+    this.iconService.registerAll([Notification20,UserAvatar20,AppSwitcher20]);
   }
 }
