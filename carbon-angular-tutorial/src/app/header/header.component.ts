@@ -12,6 +12,6 @@ export class HeaderComponent implements OnInit {
   @HostBinding('class.bx--header') headerClass = true;
   constructor(protected iconService: IconService) { }
   ngOnInit(): void {
-    this.iconService.registerAll([Notification20,UserAvatar20,AppSwitcher20]);
+    this.iconService.registerAll([Notification20, UserAvatar20, AppSwitcher20]);
   }
 }
