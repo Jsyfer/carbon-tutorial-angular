@@ -3,15 +3,20 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '', loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
-  }, {
     path: '',
-    loadChildren: () => import('./repositories/repositories.module').then((m) => m.RepositoriesModule)
-  }
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'repos',
+    loadChildren: () =>
+      import('./repositories/repositories.module').then(
+        (m) => m.RepositoriesModule
+      ),
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
